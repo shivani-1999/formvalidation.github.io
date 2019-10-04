@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+        html,body
+        {
+            margin: 0px;
+            padding: 0px;
+            background-color: honeydew;
+            user-select: none;
+        }
+
+        h1
+        {
+            color: black;
+            font-family: joseph;
+        }
+
+        *
+        {
+            box-sizing: border-box;
+        }
+
+        form
+        {
+            width: 100%;
+            height: 80vh;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        input
+        {
+            width: 45%;
+            height: 40px;
+            border: none;
+            outline: none;
+            padding-left: 10px;
+            font-family: joseph;
+            font-size: 18px;
+        }
+
+        input[type="submit"]
+        {
+            width: 15%;
+            height: 40px;
+            padding-left: 0px;
+            cursor: pointer;
+        }
+
+        @font-face{
+            src :url('jose.ttf');
+            font-family: joseph;
+        }
+
+        span
+        {
+            font-family: joseph;
+        }
+    
+    </style>
+</head>
+<body>
+    
+    
+
+    <h1 align="center">Registration Form</h1>
+
+    <form action="welcome.html" onsubmit="return complete_validate()">
+
+        <input type="text" id="name_id" placeholder="Enter Your Name ..." onkeyup="validate_name()" required autocomplete="off">&nbsp;&nbsp;<span id="msg_name"></span><br>
+
+
+        <input type="text" id="uname_id" placeholder="Enter Username ..." onkeyup="validate_uname()" required autocomplete="off">&nbsp;&nbsp;<span id="msg_uname"></span><br>
+
+
+        <input type="email" id="email_id" placeholder="Enter Your Email ..." onkeyup="validate_email()" required autocomplete="off">&nbsp;&nbsp;<span id="msg_email"></span><br><br>
+
+
+        <input type="password" onkeyup="validate_pass()" id="pass_id" placeholder="Enter Password ..."  required>&nbsp;&nbsp;<span id="msg_pass"></span><br>
+
+
+        <input type="password"  id="cpass_id" placeholder="Confirm Password ..." onkeyup="validate_cpass()" required>&nbsp;&nbsp;<span id="msg_cpass"></span><br>
+
+
+        <input type="submit" value="SUBMIT">
+
+    </form>
+
+<script src="validate.js"></script>
+</body>
+</html>
